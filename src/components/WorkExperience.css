@@ -1,0 +1,235 @@
+.experience {
+  background-color: var(--bg-white);
+  position: relative;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  padding-left: 2rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 3rem;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-marker {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 3px solid var(--bg-white);
+  box-shadow: 0 0 0 3px var(--primary-color);
+  z-index: 1;
+}
+
+.experience-content {
+  background-color: var(--bg-white);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+  border-top: 1px solid rgba(37, 99, 235, 0.1);
+  border-right: 1px solid rgba(37, 99, 235, 0.1);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.experience-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+  border-left-color: var(--accent-color);
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.experience-job-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.experience-company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.experience-company::before {
+  content: '•';
+  position: absolute;
+  left: 0.25rem;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.experience-duration {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  border-radius: 25px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-left: auto;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+.experience-description {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 0.5rem;
+  text-align: left;
+}
+
+.experience-description li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.875rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.experience-description li:last-child {
+  margin-bottom: 0;
+}
+
+.experience-description li::before {
+  content: '▸';
+  position: absolute;
+  left: 0.25rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1rem;
+  top: 0.1rem;
+}
+
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .experience-item {
+    padding-left: 2rem;
+  }
+
+  .experience-marker {
+    left: -1.25rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  .experience-content {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .experience-header {
+    padding-bottom: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .experience-job-title {
+    font-size: 1.25rem;
+  }
+
+  .experience-company {
+    font-size: 0.95rem;
+  }
+
+  .experience-duration {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .experience-description li {
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-timeline {
+    padding-left: 1rem;
+  }
+
+  .experience-item {
+    padding-left: 1.5rem;
+  }
+
+  .experience-content {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .experience-job-title {
+    font-size: 1.15rem;
+  }
+
+  .experience-company {
+    padding-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .experience-company::before {
+    display: none;
+  }
+
+  .experience-duration {
+    margin-left: 0;
+    margin-top: 0.25rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+  .experience-description li {
+    font-size: 0.875rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
